@@ -1,0 +1,32 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "icon_128.png",
+      "default_popup": "popup.html",
+      "default_title": "Rendement Locatif",
+      "icons": [ "icon_128.png", "icon_48.png", "icon_16.png" ],
+      "name": "Rendement Locatif"
+   },
+   "content_scripts": [ {
+      "css": [ "style.css" ],
+      "js": [ "jquery.min.js", "background.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_end"
+   } ],
+   "content_security_policy": "script-src 'self' https://ssl.google-analytics.com https://connect.facebook.net https://apis.google.com https://cdn.api.twitter.com https://syndication.twimg.com https://platform.twitter.com; object-src 'self'",
+   "description": "Calcul automatique du rendement brut immobilier sur les annonces seloger, leboncoin, pap, logic-immo et explorimmo.",
+   "icons": {
+      "128": "icon_128.png",
+      "16": "icon_16.png",
+      "48": "icon_48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCCPKiN2gKXQpbAsneIDcBQ0gK2zL42OThQt7XCsSg+296XNgixwslzzKT2VlmqTAjyfAgV4Hf4zddnlbggBjnH8cC+wsLFwY3ej8hMHAvrol7tpboU9kv5MFUX6hWEVSYg3fBmPO5X3XzMbFS2XVs7wArwMb9ARSP+0+9scxJw0QIDAQAB",
+   "manifest_version": 2,
+   "name": "Rendement locatif",
+   "permissions": [ "webRequest", "activeTab", "\u003Call_urls>" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.8.4",
+   "web_accessible_resources": [ "logox300.png" ]
+}

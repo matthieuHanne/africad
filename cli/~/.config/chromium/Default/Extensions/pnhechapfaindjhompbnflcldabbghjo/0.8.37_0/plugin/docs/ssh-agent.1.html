@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table.head, table.foot { width: 100%; }
+    td.head-rtitle, td.foot-os { text-align: right; }
+    td.head-vol { text-align: center; }
+    div.Pp { margin: 1ex 0ex; }
+  </style>
+  <title>SSH-AGENT(1)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">SSH-AGENT(1)</td>
+    <td class="head-vol">General Commands Manual</td>
+    <td class="head-rtitle">SSH-AGENT(1)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<h1 class="Sh" id="NAME">NAME</h1>
+<b class="Nm">ssh-agent</b> &#8212; <span class="Nd">authentication agent</span>
+<h1 class="Sh" id="SYNOPSIS">SYNOPSIS</h1>
+<table class="Nm">
+  <colgroup>
+    <col style="width: 9.00ex;"/>
+    <col/>
+  </colgroup>
+  <tr>
+    <td><b class="Nm">ssh-agent</b></td>
+    <td>[<span class="Op"><b class="Fl">-c</b> | <b class="Fl">-s</b></span>]
+      [<span class="Op"><b class="Fl">-Dd</b></span>]
+      [<span class="Op"><b class="Fl">-a</b>
+      <var class="Ar">bind_address</var></span>]
+      [<span class="Op"><b class="Fl">-E</b>
+      <var class="Ar">fingerprint_hash</var></span>]
+      [<span class="Op"><b class="Fl">-P</b>
+      <var class="Ar">pkcs11_whitelist</var></span>]
+      [<span class="Op"><b class="Fl">-t</b> <var class="Ar">life</var></span>]
+      [<span class="Op"><var class="Ar">command</var>
+      [<span class="Op"><var class="Ar">arg ...</var></span>]</span>]</td>
+  </tr>
+</table>
+<br/>
+<table class="Nm">
+  <colgroup>
+    <col style="width: 9.00ex;"/>
+    <col/>
+  </colgroup>
+  <tr>
+    <td><b class="Nm">ssh-agent</b></td>
+    <td>[<span class="Op"><b class="Fl">-c</b> | <b class="Fl">-s</b></span>]
+      <b class="Fl">-k</b></td>
+  </tr>
+</table>
+<h1 class="Sh" id="DESCRIPTION">DESCRIPTION</h1>
+<b class="Nm">ssh-agent</b> is a program to hold private keys used for public
+  key authentication (RSA, DSA, ECDSA, Ed25519). <b class="Nm">ssh-agent</b> is
+  usually started in the beginning of an X-session or a login session, and all
+  other windows or programs are started as clients to the ssh-agent program.
+  Through use of environment variables the agent can be located and
+  automatically used for authentication when logging in to other machines using
+  <a class="Xr" href="ssh.1.html">ssh(1)</a>.
+<div class="Pp"></div>
+The agent initially does not have any private keys. Keys are added using
+  <a class="Xr" href="ssh.1.html">ssh(1)</a> (see
+  <b class="Cm">AddKeysToAgent</b> in
+  <a class="Xr" href="ssh_config.5.html">ssh_config(5)</a> for details) or
+  <a class="Xr" href="ssh-add.1.html">ssh-add(1)</a>. Multiple identities may be
+  stored in <b class="Nm">ssh-agent</b> concurrently and
+  <a class="Xr" href="ssh.1.html">ssh(1)</a> will automatically use them if
+  present. <a class="Xr" href="ssh-add.1.html">ssh-add(1)</a> is also used to
+  remove keys from <b class="Nm">ssh-agent</b> and to query the keys that are
+  held in one.
+<div class="Pp"></div>
+The options are as follows:
+<dl class="Bl-tag" style="margin-left: 6.00ex;">
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-a</b>
+    <var class="Ar">bind_address</var></dt>
+  <dd class="It-tag">Bind the agent to the <span class="Ux">UNIX</span>-domain
+      socket <var class="Ar">bind_address</var>. The default is
+      <i class="Pa">$TMPDIR/ssh-XXXXXXXXXX/agent.&lt;ppid&gt;</i>.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-c</b></dt>
+  <dd class="It-tag">Generate C-shell commands on
+      <code class="Dv">stdout</code>. This is the default if
+      <code class="Ev">SHELL</code> looks like it's a csh style of shell.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-D</b></dt>
+  <dd class="It-tag">Foreground mode. When this option is specified
+      <b class="Nm">ssh-agent</b> will not fork.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-d</b></dt>
+  <dd class="It-tag">Debug mode. When this option is specified
+      <b class="Nm">ssh-agent</b> will not fork and will write debug information
+      to standard error.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-E</b>
+    <var class="Ar">fingerprint_hash</var></dt>
+  <dd class="It-tag">Specifies the hash algorithm used when displaying key
+      fingerprints. Valid options are: &#8220;md5&#8221; and
+      &#8220;sha256&#8221;. The default is &#8220;sha256&#8221;.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-k</b></dt>
+  <dd class="It-tag">Kill the current agent (given by the
+      <code class="Ev">SSH_AGENT_PID</code> environment variable).</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-P</b>
+    <var class="Ar">pkcs11_whitelist</var></dt>
+  <dd class="It-tag">Specify a pattern-list of acceptable paths for PKCS#11
+      shared libraries that may be added using the <b class="Fl">-s</b> option
+      to <a class="Xr" href="ssh-add.1.html">ssh-add(1)</a>. The default is to
+      allow loading PKCS#11 libraries from
+      &#8220;/usr/lib/*,/usr/local/lib/*&#8221;. PKCS#11 libraries that do not
+      match the whitelist will be refused. See PATTERNS in
+      <a class="Xr" href="ssh_config.5.html">ssh_config(5)</a> for a description
+      of pattern-list syntax.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-s</b></dt>
+  <dd class="It-tag">Generate Bourne shell commands on
+      <code class="Dv">stdout</code>. This is the default if
+      <code class="Ev">SHELL</code> does not look like it's a csh style of
+      shell.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-t</b>
+    <var class="Ar">life</var></dt>
+  <dd class="It-tag">Set a default value for the maximum lifetime of identities
+      added to the agent. The lifetime may be specified in seconds or in a time
+      format specified in
+      <a class="Xr" href="sshd_config.5.html">sshd_config(5)</a>. A lifetime
+      specified for an identity with
+      <a class="Xr" href="ssh-add.1.html">ssh-add(1)</a> overrides this value.
+      Without this option the default maximum lifetime is forever.</dd>
+</dl>
+<div class="Pp"></div>
+If a command line is given, this is executed as a subprocess of the agent. When
+  the command dies, so does the agent.
+<div class="Pp"></div>
+The idea is that the agent is run in the user's local PC, laptop, or terminal.
+  Authentication data need not be stored on any other machine, and
+  authentication passphrases never go over the network. However, the connection
+  to the agent is forwarded over SSH remote logins, and the user can thus use
+  the privileges given by the identities anywhere in the network in a secure
+  way.
+<div class="Pp"></div>
+There are two main ways to get an agent set up: The first is that the agent
+  starts a new subcommand into which some environment variables are exported, eg
+  <b class="Cm">ssh-agent xterm &amp;</b>. The second is that the agent prints
+  the needed shell commands (either <a class="Xr" href="sh.1.html">sh(1)</a> or
+  <a class="Xr" href="csh.1.html">csh(1)</a> syntax can be generated) which can
+  be evaluated in the calling shell, eg <b class="Cm">eval `ssh-agent -s`</b>
+  for Bourne-type shells such as <a class="Xr" href="sh.1.html">sh(1)</a> or
+  <a class="Xr" href="ksh.1.html">ksh(1)</a> and <b class="Cm">eval `ssh-agent
+  -c`</b> for <a class="Xr" href="csh.1.html">csh(1)</a> and derivatives.
+<div class="Pp"></div>
+Later <a class="Xr" href="ssh.1.html">ssh(1)</a> looks at these variables and
+  uses them to establish a connection to the agent.
+<div class="Pp"></div>
+The agent will never send a private key over its request channel. Instead,
+  operations that require a private key will be performed by the agent, and the
+  result will be returned to the requester. This way, private keys are not
+  exposed to clients using the agent.
+<div class="Pp"></div>
+A <span class="Ux">UNIX</span>-domain socket is created and the name of this
+  socket is stored in the <code class="Ev">SSH_AUTH_SOCK</code> environment
+  variable. The socket is made accessible only to the current user. This method
+  is easily abused by root or another instance of the same user.
+<div class="Pp"></div>
+The <code class="Ev">SSH_AGENT_PID</code> environment variable holds the agent's
+  process ID.
+<div class="Pp"></div>
+The agent exits automatically when the command given on the command line
+  terminates.
+<h1 class="Sh" id="FILES">FILES</h1>
+<dl class="Bl-tag" style="margin-left: 6.00ex;">
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">$TMPDIR/ssh-XXXXXXXXXX/agent.&lt;ppid&gt;</i></dt>
+  <dd class="It-tag"><span class="Ux">UNIX</span>-domain sockets used to contain
+      the connection to the authentication agent. These sockets should only be
+      readable by the owner. The sockets should get automatically removed when
+      the agent exits.</dd>
+</dl>
+<h1 class="Sh" id="SEE_ALSO">SEE ALSO</h1>
+<a class="Xr" href="ssh.1.html">ssh(1)</a>,
+  <a class="Xr" href="ssh-add.1.html">ssh-add(1)</a>,
+  <a class="Xr" href="ssh-keygen.1.html">ssh-keygen(1)</a>,
+  <a class="Xr" href="sshd.8.html">sshd(8)</a>
+<h1 class="Sh" id="AUTHORS">AUTHORS</h1>
+OpenSSH is a derivative of the original and free ssh 1.2.12 release by
+  <span class="An">Tatu Ylonen</span>. <span class="An">Aaron Campbell</span>,
+  <span class="An">Bob Beck</span>, <span class="An">Markus Friedl</span>,
+  <span class="An">Niels Provos</span>, <span class="An">Theo de Raadt</span>
+  and <span class="An">Dug Song</span> removed many bugs, re-added newer
+  features and created OpenSSH. <span class="An">Markus Friedl</span>
+  contributed the support for SSH protocol versions 1.5 and 2.0.</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">November 30, 2016</td>
+    <td class="foot-os">openssh-7.5p1</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table.head, table.foot { width: 100%; }
+    td.head-rtitle, td.foot-os { text-align: right; }
+    td.head-vol { text-align: center; }
+    div.Pp { margin: 1ex 0ex; }
+  </style>
+  <title>SFTP-SERVER(8)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">SFTP-SERVER(8)</td>
+    <td class="head-vol">System Manager's Manual</td>
+    <td class="head-rtitle">SFTP-SERVER(8)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<h1 class="Sh" id="NAME">NAME</h1>
+<b class="Nm">sftp-server</b> &#8212; <span class="Nd">SFTP server
+  subsystem</span>
+<h1 class="Sh" id="SYNOPSIS">SYNOPSIS</h1>
+<table class="Nm">
+  <colgroup>
+    <col style="width: 11.00ex;"/>
+    <col/>
+  </colgroup>
+  <tr>
+    <td><b class="Nm">sftp-server</b></td>
+    <td>[<span class="Op"><b class="Fl">-ehR</b></span>]
+      [<span class="Op"><b class="Fl">-d</b>&#160;<var class="Ar">start_directory</var></span>]
+      [<span class="Op"><b class="Fl">-f</b>&#160;<var class="Ar">log_facility</var></span>]
+      [<span class="Op"><b class="Fl">-l</b>&#160;<var class="Ar">log_level</var></span>]
+      [<span class="Op"><b class="Fl">-P</b>&#160;<var class="Ar">blacklisted_requests</var></span>]
+      [<span class="Op"><b class="Fl">-p</b>&#160;<var class="Ar">whitelisted_requests</var></span>]
+      [<span class="Op"><b class="Fl">-u</b>&#160;<var class="Ar">umask</var></span>]</td>
+  </tr>
+</table>
+<br/>
+<table class="Nm">
+  <colgroup>
+    <col style="width: 11.00ex;"/>
+    <col/>
+  </colgroup>
+  <tr>
+    <td><b class="Nm">sftp-server</b></td>
+    <td><b class="Fl">-Q</b> <var class="Ar">protocol_feature</var></td>
+  </tr>
+</table>
+<h1 class="Sh" id="DESCRIPTION">DESCRIPTION</h1>
+<b class="Nm">sftp-server</b> is a program that speaks the server side of SFTP
+  protocol to stdout and expects client requests from stdin.
+  <b class="Nm">sftp-server</b> is not intended to be called directly, but from
+  <a class="Xr" href="sshd.8.html">sshd(8)</a> using the
+  <b class="Cm">Subsystem</b> option.
+<div class="Pp"></div>
+Command-line flags to <b class="Nm">sftp-server</b> should be specified in the
+  <b class="Cm">Subsystem</b> declaration. See
+  <a class="Xr" href="sshd_config.5.html">sshd_config(5)</a> for more
+  information.
+<div class="Pp"></div>
+Valid options are:
+<dl class="Bl-tag" style="margin-left: 6.00ex;">
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-d</b>
+    <var class="Ar">start_directory</var></dt>
+  <dd class="It-tag">specifies an alternate starting directory for users. The
+      pathname may contain the following tokens that are expanded at runtime: %%
+      is replaced by a literal '%', %d is replaced by the home directory of the
+      user being authenticated, and %u is replaced by the username of that user.
+      The default is to use the user's home directory. This option is useful in
+      conjunction with the
+      <a class="Xr" href="sshd_config.5.html">sshd_config(5)</a>
+      <b class="Cm">ChrootDirectory</b> option.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-e</b></dt>
+  <dd class="It-tag">Causes <b class="Nm">sftp-server</b> to print logging
+      information to stderr instead of syslog for debugging.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-f</b>
+    <var class="Ar">log_facility</var></dt>
+  <dd class="It-tag">Specifies the facility code that is used when logging
+      messages from <b class="Nm">sftp-server</b>. The possible values are:
+      DAEMON, USER, AUTH, LOCAL0, LOCAL1, LOCAL2, LOCAL3, LOCAL4, LOCAL5,
+      LOCAL6, LOCAL7. The default is AUTH.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-h</b></dt>
+  <dd class="It-tag">Displays <b class="Nm">sftp-server</b> usage
+    information.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-l</b>
+    <var class="Ar">log_level</var></dt>
+  <dd class="It-tag">Specifies which messages will be logged by
+      <b class="Nm">sftp-server</b>. The possible values are: QUIET, FATAL,
+      ERROR, INFO, VERBOSE, DEBUG, DEBUG1, DEBUG2, and DEBUG3. INFO and VERBOSE
+      log transactions that <b class="Nm">sftp-server</b> performs on behalf of
+      the client. DEBUG and DEBUG1 are equivalent. DEBUG2 and DEBUG3 each
+      specify higher levels of debugging output. The default is ERROR.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-P</b>
+    <var class="Ar">blacklisted_requests</var></dt>
+  <dd class="It-tag">Specify a comma-separated list of SFTP protocol requests
+      that are banned by the server. <b class="Nm">sftp-server</b> will reply to
+      any blacklisted request with a failure. The <b class="Fl">-Q</b> flag can
+      be used to determine the supported request types. If both a blacklist and
+      a whitelist are specified, then the blacklist is applied before the
+      whitelist.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-p</b>
+    <var class="Ar">whitelisted_requests</var></dt>
+  <dd class="It-tag">Specify a comma-separated list of SFTP protocol requests
+      that are permitted by the server. All request types that are not on the
+      whitelist will be logged and replied to with a failure message.
+    <div class="Pp"></div>
+    Care must be taken when using this feature to ensure that requests made
+      implicitly by SFTP clients are permitted.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-Q</b>
+    <var class="Ar">protocol_feature</var></dt>
+  <dd class="It-tag">Query protocol features supported by
+      <b class="Nm">sftp-server</b>. At present the only feature that may be
+      queried is &#8220;requests&#8221;, which may be used for black or
+      whitelisting (flags <b class="Fl">-P</b> and <b class="Fl">-p</b>
+      respectively).</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-R</b></dt>
+  <dd class="It-tag">Places this instance of <b class="Nm">sftp-server</b> into
+      a read-only mode. Attempts to open files for writing, as well as other
+      operations that change the state of the filesystem, will be denied.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-u</b>
+    <var class="Ar">umask</var></dt>
+  <dd class="It-tag">Sets an explicit
+      <a class="Xr" href="umask.2.html">umask(2)</a> to be applied to
+      newly-created files and directories, instead of the user's default
+    mask.</dd>
+</dl>
+<div class="Pp"></div>
+On some systems, <b class="Nm">sftp-server</b> must be able to access
+  <i class="Pa">/dev/log</i> for logging to work, and use of
+  <b class="Nm">sftp-server</b> in a chroot configuration therefore requires
+  that <a class="Xr" href="syslogd.8.html">syslogd(8)</a> establish a logging
+  socket inside the chroot directory.
+<h1 class="Sh" id="SEE_ALSO">SEE ALSO</h1>
+<a class="Xr" href="sftp.1.html">sftp(1)</a>,
+  <a class="Xr" href="ssh.1.html">ssh(1)</a>,
+  <a class="Xr" href="sshd_config.5.html">sshd_config(5)</a>,
+  <a class="Xr" href="sshd.8.html">sshd(8)</a>
+<div class="Pp"></div>
+<cite class="Rs"><span class="RsA">T. Ylonen</span> and <span class="RsA">S.
+  Lehtinen</span>, <span class="RsT">SSH File Transfer Protocol</span>,
+  <span class="RsN">draft-ietf-secsh-filexfer-02.txt</span>,
+  <span class="RsD">October 2001</span>, <span class="RsO">work in progress
+  material</span>.</cite>
+<h1 class="Sh" id="HISTORY">HISTORY</h1>
+<b class="Nm">sftp-server</b> first appeared in <span class="Ux">OpenBSD
+  2.8</span>.
+<h1 class="Sh" id="AUTHORS">AUTHORS</h1>
+<span class="An">Markus Friedl</span>
+  &lt;<a class="Mt" href="mailto:markus@openbsd.org">markus@openbsd.org</a>&gt;</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">December 11, 2014</td>
+    <td class="foot-os">openssh-7.5p1</td>
+  </tr>
+</table>
+</body>
+</html>

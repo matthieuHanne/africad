@@ -1,0 +1,269 @@
+{
+   "already_mounted_message": {
+      "message": "ファイル システムはマウント済みです。"
+   },
+   "backup_prefs": {
+      "message": "バックアップを保存"
+   },
+   "bad_destination": {
+      "message": "送信先を解析できません: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "before_unload": {
+      "message": "このタブを閉じるとこのセッションは切断されます。"
+   },
+   "cancel_button_label": {
+      "message": "キャンセル"
+   },
+   "cmd_ssh_forget_host_help": {
+      "message": "このコマンドは、既知のホストの一覧と、対象ホストを削除する確認メッセージを表示します。"
+   },
+   "cmd_ssh_forget_host_title": {
+      "message": "既知の SSH ホストを削除します。"
+   },
+   "cmd_ssh_help": {
+      "message": "|username| パラメータと |hostname| パラメータは必須ですが、|port| は省略できます。ポートを指定しない場合は、デフォルト値の 22 が適用されます。"
+   },
+   "cmd_ssh_title": {
+      "message": "新しい SSH セッションを開きます。"
+   },
+   "command_complete": {
+      "message": "コマンド $1 が終了しました（ステータス コード $2）。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "connect_button_label": {
+      "message": "接続"
+   },
+   "connect_or_exit_message": {
+      "message": "別の接続を選択(&C)、または終了(&X)"
+   },
+   "connecting": {
+      "message": "$1 に接続しています...",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "del_keycap": {
+      "message": "[DEL]"
+   },
+   "delete_button_label": {
+      "message": "削除"
+   },
+   "disconnect_message": {
+      "message": "NaCl プラグインが終了しました（ステータス コード $1）。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "enter_keycap": {
+      "message": "[ENTER]"
+   },
+   "field_argstr_aria_label": {
+      "message": "その他の SSH 引数"
+   },
+   "field_argstr_placeholder": {
+      "message": "その他のコマンドライン引数"
+   },
+   "field_description_aria_label": {
+      "message": "説明"
+   },
+   "field_description_placeholder": {
+      "message": "username@hostname または自由形式のテキスト"
+   },
+   "field_hostname_aria_label": {
+      "message": "ホスト名"
+   },
+   "field_hostname_placeholder": {
+      "message": "ホスト名"
+   },
+   "field_identity_aria_label": {
+      "message": "ID"
+   },
+   "field_port_aria_label": {
+      "message": "ポート"
+   },
+   "field_port_placeholder": {
+      "message": "ポート"
+   },
+   "field_relay_options_aria_label": {
+      "message": "中継オプション"
+   },
+   "field_relay_options_placeholder": {
+      "message": "中継オプション"
+   },
+   "field_terminal_profile_aria_label": {
+      "message": "ターミナルのプロファイル名"
+   },
+   "field_terminal_profile_placeholder": {
+      "message": "デフォルト"
+   },
+   "field_username_aria_label": {
+      "message": "ユーザー名"
+   },
+   "field_username_placeholder": {
+      "message": "ユーザー名"
+   },
+   "found_relay": {
+      "message": "中継サーバーが見つかりました: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "identity_label": {
+      "message": "ID"
+   },
+   "import_link_aria_label": {
+      "message": "ファイルのインポート"
+   },
+   "import_link_label": {
+      "message": "インポート..."
+   },
+   "initializing_relay": {
+      "message": "次を使用して中継サーバーを検索しています: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "json_parse_error": {
+      "message": "「$1」の JSON を解析できませんでした",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_empty": {
+      "message": "削除対象となる既知のホストがありません。"
+   },
+   "known_hosts_prompt": {
+      "message": "削除するホストを選択してください（1～$1）:",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_title": {
+      "message": "既知のホスト:"
+   },
+   "loading_label": {
+      "message": "読み込んでいます..."
+   },
+   "missing_param": {
+      "message": "次のパラメータがありません: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "mount_button_label": {
+      "message": "SFTP マウント"
+   },
+   "mounted_message": {
+      "message": "マウント完了。"
+   },
+   "notify_copy": {
+      "message": "選択範囲をコピーしました"
+   },
+   "ok_button_label": {
+      "message": "OK"
+   },
+   "open_as_window_tip": {
+      "message": "上級者向けヒント: Ctrl+W キーを押してもターミナルが閉じられないようにするには、[ウィンドウとして開く] を使用します。\n上級者向けヒント: 詳しくは、$1 をご覧ください。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "options_button_label": {
+      "message": "オプション"
+   },
+   "plugin_loading": {
+      "message": "NaCl プラグインを読み込んでいます..."
+   },
+   "plugin_loading_complete": {
+      "message": "完了しました。"
+   },
+   "pref_backup_filename": {
+      "message": "Secure Shell Preferences Backup.json"
+   },
+   "preferences_header": {
+      "message": "プロファイル設定"
+   },
+   "preferences_reset": {
+      "message": "設定がすべてリセットされました。"
+   },
+   "reconnect_message": {
+      "message": "再接続(&R)、別の接続を選択(&C)、または終了(&X)"
+   },
+   "relay_retry": {
+      "message": "再試行しています..."
+   },
+   "restore_prefs": {
+      "message": "バックアップを復元"
+   },
+   "shortcut_list_aria_label": {
+      "message": "保存された接続"
+   },
+   "ssh_argstr_label": {
+      "message": "SSH 引数"
+   },
+   "terminal_preview_label": {
+      "message": "プレビュー"
+   },
+   "terminal_profile_label": {
+      "message": "現在のプロファイル"
+   },
+   "unexpected_error": {
+      "message": "予期しないエラーが発生しました。詳しくは JavaScript コンソールをご確認ください。"
+   },
+   "unmount_button_label": {
+      "message": "SFTP のマウントを解除"
+   },
+   "update_available_tooltip": {
+      "message": "アップデートを利用できます。すべてのウィンドウを閉じてください。"
+   },
+   "welcome_faq": {
+      "message": "よくある質問とその回答: $1（Ctrl キーを押しながらリンクをクリックして開きます）",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "welcome_version": {
+      "message": "$1 バージョン $2 へようこそ。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "zoom_warning": {
+      "message": "Chrome メニューで、[ズーム] を 100% に設定してください"
+   }
+}

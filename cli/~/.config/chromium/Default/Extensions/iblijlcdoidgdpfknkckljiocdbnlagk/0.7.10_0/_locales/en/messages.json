@@ -1,0 +1,121 @@
+{
+   "actions": {
+      "message": "Actions"
+   },
+   "added_to_history": {
+      "message": "added to history"
+   },
+   "automatically_copy_shortened_url": {
+      "message": "Automatically copy shortened url"
+   },
+   "changelog": {
+      "message": "Changelog"
+   },
+   "copied_to_clipboard": {
+      "message": "copied to clipboard"
+   },
+   "copy": {
+      "message": "Copy"
+   },
+   "copy_to_clipboard": {
+      "message": "Copy to clipboard"
+   },
+   "delete": {
+      "message": "delete"
+   },
+   "details": {
+      "message": "Details"
+   },
+   "edit": {
+      "message": "edit"
+   },
+   "enable_context_menu": {
+      "message": "Enable context menu"
+   },
+   "enable_history": {
+      "message": "Enable history"
+   },
+   "enable_keyboard_shortcuts": {
+      "message": "Enable keyboard shortcuts"
+   },
+   "extension_description": {
+      "message": "Shorten url with goo.gl, the Google URL shortener, and share with many different service!"
+   },
+   "extension_name": {
+      "message": "goo.gl URL Shortener (Unofficial)"
+   },
+   "google_url_shortener_access": {
+      "message": "Google URL Shortener access"
+   },
+   "google_url_shortener_access_details": {
+      "message": "allows goo.gl URL Shortener extension to add shortened url on your dashboard at http://goo.gl/"
+   },
+   "grant_access": {
+      "message": "Grant Access"
+   },
+   "incognito_mode": {
+      "message": "Incognito mode"
+   },
+   "keyboard_shortcuts": {
+      "message": "Keyboard Shortcuts"
+   },
+   "keyboard_shortcuts_warning": {
+      "message": "The keyboard shortcuts don't work in the $webstore$ pages, and in the chrome special page like New Tab, Extensions, Downloads due to security reason",
+      "placeholders": {
+         "webstore": {
+            "content": "$1"
+         }
+      }
+   },
+   "localstorage_warning": {
+      "message": "LocalStorage must be enabled for changing options"
+   },
+   "no": {
+      "message": "No"
+   },
+   "not_added_to_history": {
+      "message": "not added to history"
+   },
+   "please_note": {
+      "message": "Please note"
+   },
+   "preferences": {
+      "message": "Preferences"
+   },
+   "press_shortcut_keys": {
+      "message": "press shortcut keys..."
+   },
+   "qr_code": {
+      "message": "QR Code"
+   },
+   "reload_all_opened_tabs": {
+      "message": "You must reload all the opened tabs to apply the new keyboard shortcuts"
+   },
+   "revoke_access": {
+      "message": "Revoke Access"
+   },
+   "services": {
+      "message": "Services"
+   },
+   "settings": {
+      "message": "Settings"
+   },
+   "shorten_this_image": {
+      "message": "Shorten this image with goo.gl"
+   },
+   "shorten_this_link": {
+      "message": "Shorten this link with goo.gl"
+   },
+   "shorten_this_page": {
+      "message": "Shorten this page with goo.gl"
+   },
+   "shortening": {
+      "message": "Shortening..."
+   },
+   "timeout_occurred": {
+      "message": "Timeout occurred"
+   },
+   "yes": {
+      "message": "Yes"
+   }
+}

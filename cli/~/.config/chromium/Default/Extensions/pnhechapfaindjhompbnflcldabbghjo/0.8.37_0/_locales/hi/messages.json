@@ -1,0 +1,269 @@
+{
+   "already_mounted_message": {
+      "message": "फ़ाइल सिस्टम पहले से माउंट किया हुआ है!"
+   },
+   "backup_prefs": {
+      "message": "बैकअप सहेजें"
+   },
+   "bad_destination": {
+      "message": "गंतव्य को पार्स करने में असमर्थ: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "before_unload": {
+      "message": "इस टैब को बंद करने से यह सत्र बाधित हो जाएगा."
+   },
+   "cancel_button_label": {
+      "message": "अभी नहीं"
+   },
+   "cmd_ssh_forget_host_help": {
+      "message": "य‍ह आदेश भूलने वाले होस्‍ट के लिए ज्ञात होस्‍ट और संकेतों का एक मेनू प्रदर्शित करता है."
+   },
+   "cmd_ssh_forget_host_title": {
+      "message": "ज्ञात ssh होस्ट को भूलें."
+   },
+   "cmd_ssh_help": {
+      "message": "|username| और |hostname| पैरामीटर आवश्‍यक हैं, |port| वैकल्पिक है. यदि पोर्ट निर्दिष्ट न किया गया हो तो यह डिफ़ॉल्‍ट रूप से 22 होता है."
+   },
+   "cmd_ssh_title": {
+      "message": "नया SSH सत्र खोलता है."
+   },
+   "command_complete": {
+      "message": "आदेश $1 स्थिति कोड $2 के साथ बाहर हो गया.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "connect_button_label": {
+      "message": "कनेक्ट करें"
+   },
+   "connect_or_exit_message": {
+      "message": "कोई दूसरा कनेक्शन चुनें या बाहर निकलें?"
+   },
+   "connecting": {
+      "message": "$1 से कनेक्ट किया जा रहा है...",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "del_keycap": {
+      "message": "[DEL]"
+   },
+   "delete_button_label": {
+      "message": "हटाएं"
+   },
+   "disconnect_message": {
+      "message": "NaCl प्लग इन स्थिति कोड $1 के साथ बाहर हो गया.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "enter_keycap": {
+      "message": "[ENTER]"
+   },
+   "field_argstr_aria_label": {
+      "message": "अतिरिक्त ssh तर्क"
+   },
+   "field_argstr_placeholder": {
+      "message": "अतिरिक्त आदेश लाइन तर्क"
+   },
+   "field_description_aria_label": {
+      "message": "वर्णन"
+   },
+   "field_description_placeholder": {
+      "message": "username@hostname या मुक्त प्रारूप लेख"
+   },
+   "field_hostname_aria_label": {
+      "message": "होस्टनाम"
+   },
+   "field_hostname_placeholder": {
+      "message": "होस्टनाम"
+   },
+   "field_identity_aria_label": {
+      "message": "पहचान"
+   },
+   "field_port_aria_label": {
+      "message": "पोर्ट"
+   },
+   "field_port_placeholder": {
+      "message": "पोर्ट"
+   },
+   "field_relay_options_aria_label": {
+      "message": "रिले विकल्प"
+   },
+   "field_relay_options_placeholder": {
+      "message": "रिले विकल्प"
+   },
+   "field_terminal_profile_aria_label": {
+      "message": "टर्मिनल प्रोफ़ाइल नाम"
+   },
+   "field_terminal_profile_placeholder": {
+      "message": "डिफ़ॉल्ट"
+   },
+   "field_username_aria_label": {
+      "message": "उपयोगकर्ता नाम"
+   },
+   "field_username_placeholder": {
+      "message": "उपयोगकर्ता नाम"
+   },
+   "found_relay": {
+      "message": "रिले सर्वर मिला: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "identity_label": {
+      "message": "पहचान"
+   },
+   "import_link_aria_label": {
+      "message": "फ़ाइल आयात"
+   },
+   "import_link_label": {
+      "message": "आयात करें..."
+   },
+   "initializing_relay": {
+      "message": "$1 का उपयोग करके रिले सर्वर खोजा जा रहा है",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "json_parse_error": {
+      "message": "'$1' में JSON को पार्स नहीं किया जा सका",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_empty": {
+      "message": "कोई ज्ञात होस्ट नहीं, भूलने के लिए कुछ नहीं."
+   },
+   "known_hosts_prompt": {
+      "message": "कृपया भूलने के लिए एक होस्ट को चुनें [1-$1]:",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_title": {
+      "message": "ज्ञात होस्ट:"
+   },
+   "loading_label": {
+      "message": "लोड हो रही हैं..."
+   },
+   "missing_param": {
+      "message": "गुम पैरामीटर: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "mount_button_label": {
+      "message": "SFTP माउंट"
+   },
+   "mounted_message": {
+      "message": "माउंट किया गया!"
+   },
+   "notify_copy": {
+      "message": "चयन की कॉपी की गई"
+   },
+   "ok_button_label": {
+      "message": "ठीक"
+   },
+   "open_as_window_tip": {
+      "message": "[प्रो टिप्स] Control-W को अपना टर्मिनल बंद करने देने से रोकने के लिए 'विंडो के रूप में खोलें' का उपयोग करें!\n[प्रो टिप्स] अधिक जानकारी के लिए $1 देखें.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "options_button_label": {
+      "message": "विकल्प"
+   },
+   "plugin_loading": {
+      "message": "NaCl प्लगइन लोड हो रहा है..."
+   },
+   "plugin_loading_complete": {
+      "message": " संपन्न."
+   },
+   "pref_backup_filename": {
+      "message": "Secure Shell Preferences Backup.json"
+   },
+   "preferences_header": {
+      "message": "प्रोफ़ाइल सेटिंग"
+   },
+   "preferences_reset": {
+      "message": "सभी प्राथमिकताएं रीसेट की गईं!"
+   },
+   "reconnect_message": {
+      "message": "फिर से कनेक्ट करें, कोई दूसरा कनेक्शन चुनें या बाहर निकलेें?"
+   },
+   "relay_retry": {
+      "message": "फिर से कोशिश की जा रही है..."
+   },
+   "restore_prefs": {
+      "message": "बैकअप बहाल करें"
+   },
+   "shortcut_list_aria_label": {
+      "message": "सहेजे गए कनेक्शन"
+   },
+   "ssh_argstr_label": {
+      "message": "SSH तर्क"
+   },
+   "terminal_preview_label": {
+      "message": "पूर्वावलोकन"
+   },
+   "terminal_profile_label": {
+      "message": "अभी वाली प्रोफ़ाइल"
+   },
+   "unexpected_error": {
+      "message": "एक अनेपक्षित गड़बड़ी हुई, कृपया अधिक विवरण के लिए JavaScript पैनल देखें."
+   },
+   "unmount_button_label": {
+      "message": "SFTP को अनमाउंट करें"
+   },
+   "update_available_tooltip": {
+      "message": "एक अपडेट उपलब्ध है. कृपया सभी विंडो बंद करें."
+   },
+   "welcome_faq": {
+      "message": "अक्सर पूछे जाने वाले प्रश्नों के उत्तर: $1 (लिंक खोलने के लिए उन पर ctrl+क्लिक करें)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "welcome_version": {
+      "message": "$1 के वर्शन $2 में आपका स्वागत है.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "zoom_warning": {
+      "message": "कृपया Chrome मेनू->ज़ूम को 100% पर सेट करें"
+   }
+}

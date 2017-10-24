@@ -1,0 +1,12 @@
+2017/10/22-10:23:51.545 17346 Reusing MANIFEST ~/.config/chromium/Default/Session Storage/MANIFEST-000001
+2017/10/22-10:23:51.545 17346 Recovering log #7
+2017/10/22-10:23:51.546 17346 Reusing old log ~/.config/chromium/Default/Session Storage/000007.log 
+2017/10/22-12:20:04.042 17275 Compacting 1@1 + 1@2 files
+2017/10/22-12:20:04.052 17275 Generated table #10@1: 20 keys, 1212 bytes
+2017/10/22-12:20:04.052 17275 Compacted 1@1 + 1@2 files => 1212 bytes
+2017/10/22-12:20:04.067 17275 compacted to: files[ 0 0 1 0 0 0 0 ]
+2017/10/22-12:20:04.067 17275 Delete type=2 #8
+2017/10/22-12:20:04.067 17275 Delete type=2 #5
+2017/10/22-14:52:27.343 17275 Level-0 table #12: started
+2017/10/22-14:52:27.356 17275 Level-0 table #12: 20212 bytes OK
+2017/10/22-14:52:27.361 17275 Delete type=0 #7

@@ -1,0 +1,269 @@
+{
+   "already_mounted_message": {
+      "message": "這個檔案系統已經掛接。"
+   },
+   "backup_prefs": {
+      "message": "儲存備份"
+   },
+   "bad_destination": {
+      "message": "無法剖析目的地：$1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "before_unload": {
+      "message": "關閉這個分頁會使這個工作階段中斷連線。"
+   },
+   "cancel_button_label": {
+      "message": "取消"
+   },
+   "cmd_ssh_forget_host_help": {
+      "message": "這個指令會顯示已知主機選單和要刪除的主機提示。"
+   },
+   "cmd_ssh_forget_host_title": {
+      "message": "刪除已知的 SSH 主機。"
+   },
+   "cmd_ssh_help": {
+      "message": "|username| 和 |hostname| 是必要參數，|port| 為選用參數。如未指定通訊埠，則通訊埠會預設為 22。"
+   },
+   "cmd_ssh_title": {
+      "message": "開啟新的 SSH 工作階段。"
+   },
+   "command_complete": {
+      "message": "$1 指令結束，傳回 $2 狀態碼。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "connect_button_label": {
+      "message": "連線"
+   },
+   "connect_or_exit_message": {
+      "message": "選擇其他連線(C)或結束(X)？"
+   },
+   "connecting": {
+      "message": "正在連線至 $1...",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "del_keycap": {
+      "message": "[DEL]"
+   },
+   "delete_button_label": {
+      "message": "刪除"
+   },
+   "disconnect_message": {
+      "message": "NaCl 外掛程式結束，傳回 $1 狀態碼。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "enter_keycap": {
+      "message": "[ENTER]"
+   },
+   "field_argstr_aria_label": {
+      "message": "其他 ssh 引數"
+   },
+   "field_argstr_placeholder": {
+      "message": "其他命令列引數"
+   },
+   "field_description_aria_label": {
+      "message": "說明"
+   },
+   "field_description_placeholder": {
+      "message": "\u003C使用者名稱>@\u003C主機名稱> 或形式不拘的文字"
+   },
+   "field_hostname_aria_label": {
+      "message": "主機名稱"
+   },
+   "field_hostname_placeholder": {
+      "message": "主機名稱"
+   },
+   "field_identity_aria_label": {
+      "message": "身分"
+   },
+   "field_port_aria_label": {
+      "message": "通訊埠"
+   },
+   "field_port_placeholder": {
+      "message": "通訊埠"
+   },
+   "field_relay_options_aria_label": {
+      "message": "轉送選項"
+   },
+   "field_relay_options_placeholder": {
+      "message": "轉送選項"
+   },
+   "field_terminal_profile_aria_label": {
+      "message": "終端機設定檔名稱"
+   },
+   "field_terminal_profile_placeholder": {
+      "message": "預設"
+   },
+   "field_username_aria_label": {
+      "message": "使用者名稱"
+   },
+   "field_username_placeholder": {
+      "message": "使用者名稱"
+   },
+   "found_relay": {
+      "message": "找到轉送伺服器：$1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "identity_label": {
+      "message": "身分"
+   },
+   "import_link_aria_label": {
+      "message": "匯入檔案"
+   },
+   "import_link_label": {
+      "message": "匯入..."
+   },
+   "initializing_relay": {
+      "message": "使用 $1 查詢轉送伺服器",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "json_parse_error": {
+      "message": "無法剖析「$1」中的 JSON",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_empty": {
+      "message": "沒有任何可刪除的已知主機。"
+   },
+   "known_hosts_prompt": {
+      "message": "請選取要刪除的主機 [1-$1]：",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_title": {
+      "message": "已知的主機："
+   },
+   "loading_label": {
+      "message": "載入中…"
+   },
+   "missing_param": {
+      "message": "找不到下列參數：$1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "mount_button_label": {
+      "message": "SFTP 掛接"
+   },
+   "mounted_message": {
+      "message": "已掛接！"
+   },
+   "notify_copy": {
+      "message": "已複製所選內容"
+   },
+   "ok_button_label": {
+      "message": "確定"
+   },
+   "open_as_window_tip": {
+      "message": "[實用秘訣] 使用 [在視窗中開啟] 可確保按下 Ctrl + W 鍵時不會關閉終端機！\n[實用秘訣] 詳情請參閱 $1。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "options_button_label": {
+      "message": "選項"
+   },
+   "plugin_loading": {
+      "message": "正在載入 NaCl 外掛程式..."
+   },
+   "plugin_loading_complete": {
+      "message": "完成。"
+   },
+   "pref_backup_filename": {
+      "message": "Secure Shell Preferences Backup.json"
+   },
+   "preferences_header": {
+      "message": "設定檔設定"
+   },
+   "preferences_reset": {
+      "message": "重設所有偏好設定！"
+   },
+   "reconnect_message": {
+      "message": "重新連線(R)、選擇其他連線(C)或結束(X)？"
+   },
+   "relay_retry": {
+      "message": "重試中..."
+   },
+   "restore_prefs": {
+      "message": "還原備份內容"
+   },
+   "shortcut_list_aria_label": {
+      "message": "已儲存的連線"
+   },
+   "ssh_argstr_label": {
+      "message": "SSH 引數"
+   },
+   "terminal_preview_label": {
+      "message": "預覽"
+   },
+   "terminal_profile_label": {
+      "message": "目前的設定檔"
+   },
+   "unexpected_error": {
+      "message": "發生未預期的錯誤，請查看 JavaScript 控制台瞭解詳情。"
+   },
+   "unmount_button_label": {
+      "message": "卸載 SFTP"
+   },
+   "update_available_tooltip": {
+      "message": "有可用的更新，請關閉所有視窗。"
+   },
+   "welcome_faq": {
+      "message": "常見問題解答：$1 (按住 Ctrl 鍵並點選連結即可開啟網址)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "welcome_version": {
+      "message": "歡迎使用 $1 $2 版。",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "zoom_warning": {
+      "message": "請設定 Chrome 選單 -> [縮放到 100%]"
+   }
+}

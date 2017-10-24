@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table.head, table.foot { width: 100%; }
+    td.head-rtitle, td.foot-os { text-align: right; }
+    td.head-vol { text-align: center; }
+    div.Pp { margin: 1ex 0ex; }
+  </style>
+  <title>SCP(1)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">SCP(1)</td>
+    <td class="head-vol">General Commands Manual</td>
+    <td class="head-rtitle">SCP(1)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<h1 class="Sh" id="NAME">NAME</h1>
+<b class="Nm">scp</b> &#8212; <span class="Nd">secure copy (remote file copy
+  program)</span>
+<h1 class="Sh" id="SYNOPSIS">SYNOPSIS</h1>
+<table class="Nm">
+  <colgroup>
+    <col style="width: 3.00ex;"/>
+    <col/>
+  </colgroup>
+  <tr>
+    <td><b class="Nm">scp</b></td>
+    <td>[<span class="Op"><b class="Fl">-12346BCpqrv</b></span>]
+      [<span class="Op"><b class="Fl">-c</b>&#160;<var class="Ar">cipher</var></span>]
+      [<span class="Op"><b class="Fl">-F</b>&#160;<var class="Ar">ssh_config</var></span>]
+      [<span class="Op"><b class="Fl">-i</b>&#160;<var class="Ar">identity_file</var></span>]
+      [<span class="Op"><b class="Fl">-l</b>&#160;<var class="Ar">limit</var></span>]
+      [<span class="Op"><b class="Fl">-o</b>&#160;<var class="Ar">ssh_option</var></span>]
+      [<span class="Op"><b class="Fl">-P</b>&#160;<var class="Ar">port</var></span>]
+      [<span class="Op"><b class="Fl">-S</b>&#160;<var class="Ar">program</var></span>]
+      [<span class="Op">[<span class="Op"><var class="Ar">user</var><span class="No">@</span></span>]<var class="Ar">host1</var>:</span>]<var class="Ar">file1</var>
+      <var class="Ar">...</var>
+      [<span class="Op">[<span class="Op"><var class="Ar">user</var><span class="No">@</span></span>]<var class="Ar">host2</var>:</span>]<var class="Ar">file2</var></td>
+  </tr>
+</table>
+<h1 class="Sh" id="DESCRIPTION">DESCRIPTION</h1>
+<b class="Nm">scp</b> copies files between hosts on a network. It uses
+  <a class="Xr" href="ssh.1.html">ssh(1)</a> for data transfer, and uses the
+  same authentication and provides the same security as
+  <a class="Xr" href="ssh.1.html">ssh(1)</a>. <b class="Nm">scp</b> will ask for
+  passwords or passphrases if they are needed for authentication.
+<div class="Pp"></div>
+File names may contain a user and host specification to indicate that the file
+  is to be copied to/from that host. Local file names can be made explicit using
+  absolute or relative pathnames to avoid <b class="Nm">scp</b> treating file
+  names containing &#8216;:&#8217; as host specifiers. Copies between two remote
+  hosts are also permitted.
+<div class="Pp"></div>
+The options are as follows:
+<dl class="Bl-tag" style="margin-left: 6.00ex;">
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-1</b></dt>
+  <dd class="It-tag">Forces <b class="Nm">scp</b> to use protocol 1.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-2</b></dt>
+  <dd class="It-tag">Forces <b class="Nm">scp</b> to use protocol 2.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-3</b></dt>
+  <dd class="It-tag">Copies between two remote hosts are transferred through the
+      local host. Without this option the data is copied directly between the
+      two remote hosts. Note that this option disables the progress meter.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-4</b></dt>
+  <dd class="It-tag">Forces <b class="Nm">scp</b> to use IPv4 addresses
+    only.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-6</b></dt>
+  <dd class="It-tag">Forces <b class="Nm">scp</b> to use IPv6 addresses
+    only.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-B</b></dt>
+  <dd class="It-tag">Selects batch mode (prevents asking for passwords or
+      passphrases).</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-C</b></dt>
+  <dd class="It-tag">Compression enable. Passes the <b class="Fl">-C</b> flag to
+      <a class="Xr" href="ssh.1.html">ssh(1)</a> to enable compression.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-c</b>
+    <var class="Ar">cipher</var></dt>
+  <dd class="It-tag">Selects the cipher to use for encrypting the data transfer.
+      This option is directly passed to
+      <a class="Xr" href="ssh.1.html">ssh(1)</a>.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-F</b>
+    <var class="Ar">ssh_config</var></dt>
+  <dd class="It-tag">Specifies an alternative per-user configuration file for
+      <b class="Nm">ssh</b>. This option is directly passed to
+      <a class="Xr" href="ssh.1.html">ssh(1)</a>.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-i</b>
+    <var class="Ar">identity_file</var></dt>
+  <dd class="It-tag">Selects the file from which the identity (private key) for
+      public key authentication is read. This option is directly passed to
+      <a class="Xr" href="ssh.1.html">ssh(1)</a>.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-l</b>
+    <var class="Ar">limit</var></dt>
+  <dd class="It-tag">Limits the used bandwidth, specified in Kbit/s.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-o</b>
+    <var class="Ar">ssh_option</var></dt>
+  <dd class="It-tag">Can be used to pass options to <b class="Nm">ssh</b> in the
+      format used in <a class="Xr" href="ssh_config.5.html">ssh_config(5)</a>.
+      This is useful for specifying options for which there is no separate
+      <b class="Nm">scp</b> command-line flag. For full details of the options
+      listed below, and their possible values, see
+      <a class="Xr" href="ssh_config.5.html">ssh_config(5)</a>.
+    <div class="Pp"></div>
+    <div class="Bl-tag" style="margin-left: 6.00ex;">
+    <dl class="Bl-tag" style="margin-left: 6.00ex;">
+      <dt class="It-tag" style="margin-left: -6.00ex;">AddressFamily</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">BatchMode</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">BindAddress</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CanonicalDomains</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CanonicalizeFallbackLocal</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CanonicalizeHostname</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CanonicalizeMaxDots</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CanonicalizePermittedCNAMEs</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CertificateFile</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ChallengeResponseAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CheckHostIP</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">Cipher</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">Ciphers</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">Compression</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">CompressionLevel</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ConnectionAttempts</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ConnectTimeout</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ControlMaster</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ControlPath</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ControlPersist</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">GlobalKnownHostsFile</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">GSSAPIAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">GSSAPIDelegateCredentials</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">HashKnownHosts</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">Host</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">HostbasedAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">HostbasedKeyTypes</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">HostKeyAlgorithms</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">HostKeyAlias</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">HostName</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">IdentitiesOnly</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">IdentityAgent</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">IdentityFile</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">IPQoS</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">KbdInteractiveAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">KbdInteractiveDevices</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">KexAlgorithms</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">LogLevel</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">MACs</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">NoHostAuthenticationForLocalhost</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">NumberOfPasswordPrompts</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">PasswordAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">PKCS11Provider</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">Port</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">PreferredAuthentications</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">Protocol</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ProxyCommand</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ProxyJump</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">PubkeyAcceptedKeyTypes</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">PubkeyAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">RekeyLimit</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">RhostsRSAAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">RSAAuthentication</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">SendEnv</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ServerAliveInterval</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">ServerAliveCountMax</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">StrictHostKeyChecking</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">TCPKeepAlive</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">UpdateHostKeys</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">UsePrivilegedPort</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">User</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">UserKnownHostsFile</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+      <dt class="It-tag" style="margin-left: -6.00ex;">VerifyHostKeyDNS</dt>
+      <dd class="It-tag" style="width: auto;">&#160;</dd>
+    </dl>
+    </div>
+  </dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-P</b>
+    <var class="Ar">port</var></dt>
+  <dd class="It-tag">Specifies the port to connect to on the remote host. Note
+      that this option is written with a capital &#8216;P&#8217;, because
+      <b class="Fl">-p</b> is already reserved for preserving the times and
+      modes of the file.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-p</b></dt>
+  <dd class="It-tag">Preserves modification times, access times, and modes from
+      the original file.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-q</b></dt>
+  <dd class="It-tag">Quiet mode: disables the progress meter as well as warning
+      and diagnostic messages from
+    <a class="Xr" href="ssh.1.html">ssh(1)</a>.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-r</b></dt>
+  <dd class="It-tag">Recursively copy entire directories. Note that
+      <b class="Nm">scp</b> follows symbolic links encountered in the tree
+      traversal.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-S</b>
+    <var class="Ar">program</var></dt>
+  <dd class="It-tag">Name of <var class="Ar">program</var> to use for the
+      encrypted connection. The program must understand
+      <a class="Xr" href="ssh.1.html">ssh(1)</a> options.</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><b class="Fl">-v</b></dt>
+  <dd class="It-tag">Verbose mode. Causes <b class="Nm">scp</b> and
+      <a class="Xr" href="ssh.1.html">ssh(1)</a> to print debugging messages
+      about their progress. This is helpful in debugging connection,
+      authentication, and configuration problems.</dd>
+</dl>
+<h1 class="Sh" id="EXIT_STATUS">EXIT STATUS</h1>
+The <b class="Nm">scp</b> utility exits&#160;0 on success, and&#160;&gt;0 if an
+  error occurs.
+<h1 class="Sh" id="SEE_ALSO">SEE ALSO</h1>
+<a class="Xr" href="sftp.1.html">sftp(1)</a>,
+  <a class="Xr" href="ssh.1.html">ssh(1)</a>,
+  <a class="Xr" href="ssh-add.1.html">ssh-add(1)</a>,
+  <a class="Xr" href="ssh-agent.1.html">ssh-agent(1)</a>,
+  <a class="Xr" href="ssh-keygen.1.html">ssh-keygen(1)</a>,
+  <a class="Xr" href="ssh_config.5.html">ssh_config(5)</a>,
+  <a class="Xr" href="sshd.8.html">sshd(8)</a>
+<h1 class="Sh" id="HISTORY">HISTORY</h1>
+<b class="Nm">scp</b> is based on the rcp program in <span class="Ux">BSD</span>
+  source code from the Regents of the University of California.
+<h1 class="Sh" id="AUTHORS">AUTHORS</h1>
+<span class="An">Timo Rinne</span>
+  &lt;<a class="Mt" href="mailto:tri@iki.fi">tri@iki.fi</a>&gt;
+<br/>
+<span class="An">Tatu Ylonen</span>
+  &lt;<a class="Mt" href="mailto:ylo@cs.hut.fi">ylo@cs.hut.fi</a>&gt;</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">July 16, 2016</td>
+    <td class="foot-os">openssh-7.5p1</td>
+  </tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,121 @@
+{
+   "actions": {
+      "message": "Azioni"
+   },
+   "added_to_history": {
+      "message": "aggiunto alla cronologia"
+   },
+   "automatically_copy_shortened_url": {
+      "message": "Copia automaticamente url accorciato"
+   },
+   "changelog": {
+      "message": "Changelog"
+   },
+   "copied_to_clipboard": {
+      "message": "copiato negli appunti"
+   },
+   "copy": {
+      "message": "Copia"
+   },
+   "copy_to_clipboard": {
+      "message": "Copia negli appunti"
+   },
+   "delete": {
+      "message": "elimina"
+   },
+   "details": {
+      "message": "Dettagli"
+   },
+   "edit": {
+      "message": "modifica"
+   },
+   "enable_context_menu": {
+      "message": "Abilita menu contestuale"
+   },
+   "enable_history": {
+      "message": "Abilita cronologia"
+   },
+   "enable_keyboard_shortcuts": {
+      "message": "Abilita scorciatoie da tastiera"
+   },
+   "extension_description": {
+      "message": "Accorcia gli url con goo.gl, l'URL shortener di Google, e condividili con i moltissimi servizi disponibili!"
+   },
+   "extension_name": {
+      "message": "goo.gl URL Shortener (Unofficial)"
+   },
+   "google_url_shortener_access": {
+      "message": "Accesso a Google URL Shortener"
+   },
+   "google_url_shortener_access_details": {
+      "message": "permette all'estensione goo.gl URL Shortener di salvare gli url accorciati su http://goo.gl/"
+   },
+   "grant_access": {
+      "message": "Concedi Accesso"
+   },
+   "incognito_mode": {
+      "message": "Modalità incognito"
+   },
+   "keyboard_shortcuts": {
+      "message": "Scorciatoie da tastiera"
+   },
+   "keyboard_shortcuts_warning": {
+      "message": "Le scorciatoie da tastiera non funzionano nelle pagine del $webstore$, e nelle pagine speciali di chrome come Nuova scheda, Estensioni, Download a causa di restrizioni di sicurezza",
+      "placeholders": {
+         "webstore": {
+            "content": "$1"
+         }
+      }
+   },
+   "localstorage_warning": {
+      "message": "LocalStorage deve essere abilitato per salvare le opzioni"
+   },
+   "no": {
+      "message": "No"
+   },
+   "not_added_to_history": {
+      "message": "non aggiunto alla cronologia"
+   },
+   "please_note": {
+      "message": "Attenzione"
+   },
+   "preferences": {
+      "message": "Preferenze"
+   },
+   "press_shortcut_keys": {
+      "message": "premere i tasti della scorciatoia..."
+   },
+   "qr_code": {
+      "message": "Codice QR"
+   },
+   "reload_all_opened_tabs": {
+      "message": "E' necessario ricaricare tutte le schede aperte per applicare le nuove scorciatoie da tastiera"
+   },
+   "revoke_access": {
+      "message": "Revoca Accesso"
+   },
+   "services": {
+      "message": "Servizi"
+   },
+   "settings": {
+      "message": "Impostazioni"
+   },
+   "shorten_this_image": {
+      "message": "Accorcia questa immagine con goo.gl"
+   },
+   "shorten_this_link": {
+      "message": "Accorcia questo collegamento con goo.gl"
+   },
+   "shorten_this_page": {
+      "message": "Accorcia questa pagina con goo.gl"
+   },
+   "shortening": {
+      "message": "Attendere..."
+   },
+   "timeout_occurred": {
+      "message": "Si è verificato un timeout"
+   },
+   "yes": {
+      "message": "Si"
+   }
+}

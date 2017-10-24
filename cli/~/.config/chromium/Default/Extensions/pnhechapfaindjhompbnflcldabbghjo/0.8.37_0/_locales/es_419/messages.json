@@ -1,0 +1,269 @@
+{
+   "already_mounted_message": {
+      "message": "Ya se activó el sistema de archivos."
+   },
+   "backup_prefs": {
+      "message": "Guardar copia de seguridad"
+   },
+   "bad_destination": {
+      "message": "No se puede analizar el destino: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "before_unload": {
+      "message": "Al cerrar esta pestaña, esta sesión finalizará."
+   },
+   "cancel_button_label": {
+      "message": "Cancelar"
+   },
+   "cmd_ssh_forget_host_help": {
+      "message": "Este comando muestra un menú de hosts conocidos y solicita el host que se eliminará."
+   },
+   "cmd_ssh_forget_host_title": {
+      "message": "Elimina un host SSH conocido."
+   },
+   "cmd_ssh_help": {
+      "message": "Los parámetros [username] y [hostname] son obligatorios; en cambio, el parámetro [port] es opcional. Si no se especifica el puerto, este se establece en 22 de forma predeterminada."
+   },
+   "cmd_ssh_title": {
+      "message": "Abre una nueva sesión SSH."
+   },
+   "command_complete": {
+      "message": "El comando $1 salió con el código de estado $2.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "connect_button_label": {
+      "message": "Conectar"
+   },
+   "connect_or_exit_message": {
+      "message": "¿Elegir (C) otra conexión o Salir (X)?"
+   },
+   "connecting": {
+      "message": "Conectando con $1…",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "del_keycap": {
+      "message": "[SUPR]"
+   },
+   "delete_button_label": {
+      "message": "Borrar"
+   },
+   "disconnect_message": {
+      "message": "El complemento NaCl salió con el código de estado $1.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "enter_keycap": {
+      "message": "[INTRO]"
+   },
+   "field_argstr_aria_label": {
+      "message": "argumentos ssh adicionales"
+   },
+   "field_argstr_placeholder": {
+      "message": "argumentos de línea de comandos adicionales"
+   },
+   "field_description_aria_label": {
+      "message": "descripción"
+   },
+   "field_description_placeholder": {
+      "message": "nombredeusuario@nombredehost o texto sin formato"
+   },
+   "field_hostname_aria_label": {
+      "message": "nombredehost"
+   },
+   "field_hostname_placeholder": {
+      "message": "nombredehost"
+   },
+   "field_identity_aria_label": {
+      "message": "identidad"
+   },
+   "field_port_aria_label": {
+      "message": "puerto"
+   },
+   "field_port_placeholder": {
+      "message": "puerto"
+   },
+   "field_relay_options_aria_label": {
+      "message": "opciones de retransmisión"
+   },
+   "field_relay_options_placeholder": {
+      "message": "opciones de retransmisión"
+   },
+   "field_terminal_profile_aria_label": {
+      "message": "nombre de perfil del terminal"
+   },
+   "field_terminal_profile_placeholder": {
+      "message": "predeterminado"
+   },
+   "field_username_aria_label": {
+      "message": "nombredeusuario"
+   },
+   "field_username_placeholder": {
+      "message": "nombredeusuario"
+   },
+   "found_relay": {
+      "message": "Se encontró el servidor de retransmisión: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "identity_label": {
+      "message": "Identidad"
+   },
+   "import_link_aria_label": {
+      "message": "importación de archivo"
+   },
+   "import_link_label": {
+      "message": "Importar…"
+   },
+   "initializing_relay": {
+      "message": "Buscando servidor de retransmisión que use el host: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "json_parse_error": {
+      "message": "No se pudo analizar el archivo JSON en \"$1\"",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_empty": {
+      "message": "No hay ningún host conocido para eliminar."
+   },
+   "known_hosts_prompt": {
+      "message": "Selecciona un host para eliminar [entre 1 y $1]:",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_title": {
+      "message": "Hosts conocidos:"
+   },
+   "loading_label": {
+      "message": "Cargando…"
+   },
+   "missing_param": {
+      "message": "Parámetro ausente: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "mount_button_label": {
+      "message": "Activación de SFTP"
+   },
+   "mounted_message": {
+      "message": "Se activó correctamente."
+   },
+   "notify_copy": {
+      "message": "Se copió la selección"
+   },
+   "ok_button_label": {
+      "message": "Aceptar"
+   },
+   "open_as_window_tip": {
+      "message": "[Sugerencia profesional] Usa \"Abrir como ventana\" para evitar que la combinación de teclas Ctrl+W cierre tu terminal.\n[Sugerencia profesional] Para obtener más información, consulta $1.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "options_button_label": {
+      "message": "Opciones"
+   },
+   "plugin_loading": {
+      "message": "Cargando el complemento NaCl..."
+   },
+   "plugin_loading_complete": {
+      "message": " Listo"
+   },
+   "pref_backup_filename": {
+      "message": "Copia de seguridad de las preferencias para Secure Shell.json"
+   },
+   "preferences_header": {
+      "message": "Configuración del perfil"
+   },
+   "preferences_reset": {
+      "message": "Se restablecieron todas las preferencias."
+   },
+   "reconnect_message": {
+      "message": "¿Reconectar (R), Elegir (C) otra conexión o Salir (E)?"
+   },
+   "relay_retry": {
+      "message": "Reintentando…"
+   },
+   "restore_prefs": {
+      "message": "Restaurar copia de seguridad"
+   },
+   "shortcut_list_aria_label": {
+      "message": "conexiones guardadas"
+   },
+   "ssh_argstr_label": {
+      "message": "Argumentos SSH"
+   },
+   "terminal_preview_label": {
+      "message": "Vista previa"
+   },
+   "terminal_profile_label": {
+      "message": "Perfil actual"
+   },
+   "unexpected_error": {
+      "message": "Se produjo un error inesperado. Consulta la Consola de JavaScript para obtener más detalles."
+   },
+   "unmount_button_label": {
+      "message": "Desactivar SFTP"
+   },
+   "update_available_tooltip": {
+      "message": "Hay una actualización disponible. Cierra todas las ventanas."
+   },
+   "welcome_faq": {
+      "message": "Respuestas a las preguntas frecuentes: $1 (presiona ctrl+clic en los vínculos para abrirlos)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "welcome_version": {
+      "message": "Bienvenido a $1 versión $2.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "zoom_warning": {
+      "message": "Establece el zoom al 100% desde Menú en Chrome"
+   }
+}

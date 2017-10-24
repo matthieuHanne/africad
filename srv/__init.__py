@@ -1,0 +1,4 @@
+from Flask import Flask
+srv = Flask(__name__)
+
+from srv import api

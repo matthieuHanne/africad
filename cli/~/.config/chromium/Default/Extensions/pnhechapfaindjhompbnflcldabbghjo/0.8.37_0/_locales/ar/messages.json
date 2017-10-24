@@ -1,0 +1,269 @@
+{
+   "already_mounted_message": {
+      "message": "تم تحميل نظام الملفات من قبل!"
+   },
+   "backup_prefs": {
+      "message": "حفظ نسخة احتياطية"
+   },
+   "bad_destination": {
+      "message": "تعذر تحليل الوجهة: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "before_unload": {
+      "message": "سيؤدي غلق علامة التبويب هذه إلى فصل هذه الجلسة."
+   },
+   "cancel_button_label": {
+      "message": "إلغاء"
+   },
+   "cmd_ssh_forget_host_help": {
+      "message": "يعرض هذا الأمر قائمة بالأجهزة المضيفة المعروفة ومطالبات للمضيف المراد حذفه."
+   },
+   "cmd_ssh_forget_host_title": {
+      "message": "‏حذف مضيف ssh معروف."
+   },
+   "cmd_ssh_help": {
+      "message": "‏المعلمتان |username| و|hostname| مطلوبتان، وتكون المعلمة |port| اختيارية. إذا لم يتم تحديد المنفذ، فإنه يتم تعيينه على 22 افتراضيًا."
+   },
+   "cmd_ssh_title": {
+      "message": "‏لفتح جلسة SSH جديدة."
+   },
+   "command_complete": {
+      "message": "تم إنهاء الأمر $1 برمز الحالة $2.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "connect_button_label": {
+      "message": "اتصال"
+   },
+   "connect_or_exit_message": {
+      "message": "هل تريد اختيار اتصال آخر أم الخروج؟"
+   },
+   "connecting": {
+      "message": "جارٍ الاتصال بـ $1...",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "del_keycap": {
+      "message": "[DEL]"
+   },
+   "delete_button_label": {
+      "message": "حذف"
+   },
+   "disconnect_message": {
+      "message": "‏تم إنهاء المكوّن الإضافي NaCl برمز الحالة $1.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "enter_keycap": {
+      "message": "[ENTER]"
+   },
+   "field_argstr_aria_label": {
+      "message": "‏وسيطات ssh إضافية"
+   },
+   "field_argstr_placeholder": {
+      "message": "وسيطات سطور أوامر إضافية"
+   },
+   "field_description_aria_label": {
+      "message": "الوصف"
+   },
+   "field_description_placeholder": {
+      "message": "اسم المستخدم@اسم المضيف أو خالٍ من النص"
+   },
+   "field_hostname_aria_label": {
+      "message": "اسم المضيف"
+   },
+   "field_hostname_placeholder": {
+      "message": "اسم المضيف"
+   },
+   "field_identity_aria_label": {
+      "message": "الهوية"
+   },
+   "field_port_aria_label": {
+      "message": "المنفذ"
+   },
+   "field_port_placeholder": {
+      "message": "المنفذ"
+   },
+   "field_relay_options_aria_label": {
+      "message": "خيارات الترحيل"
+   },
+   "field_relay_options_placeholder": {
+      "message": "خيارات الترحيل"
+   },
+   "field_terminal_profile_aria_label": {
+      "message": "اسم الملف الشخصي الطرفي"
+   },
+   "field_terminal_profile_placeholder": {
+      "message": "افتراضي"
+   },
+   "field_username_aria_label": {
+      "message": "اسم المستخدم"
+   },
+   "field_username_placeholder": {
+      "message": "اسم المستخدم"
+   },
+   "found_relay": {
+      "message": "تم العثور على خادم الترحيل: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "identity_label": {
+      "message": "الهوية"
+   },
+   "import_link_aria_label": {
+      "message": "استيراد الملف"
+   },
+   "import_link_label": {
+      "message": "استيراد..."
+   },
+   "initializing_relay": {
+      "message": "البحث عن خادم الترحيل باستخدام: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "json_parse_error": {
+      "message": "‏تعذر تحليل JSON في '$1'",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_empty": {
+      "message": "ليس هناك أجهزة مضيفة معروفة، ليس هناك مضيف لحذفه."
+   },
+   "known_hosts_prompt": {
+      "message": "الرجاء تحديد مضيف لحذفه [1-$1]:",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "known_hosts_title": {
+      "message": "الأجهزة المضيفة المعروفة:"
+   },
+   "loading_label": {
+      "message": "جارٍ التحميل..."
+   },
+   "missing_param": {
+      "message": "معلمة مفقودة: $1",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "mount_button_label": {
+      "message": "‏تحميل SFTP"
+   },
+   "mounted_message": {
+      "message": "تم التحميل!"
+   },
+   "notify_copy": {
+      "message": "تم نسخ التحديد"
+   },
+   "ok_button_label": {
+      "message": "موافق"
+   },
+   "open_as_window_tip": {
+      "message": "‏[نصيحة للمحترفين] استخدم 'فتح كنافذة' لمنع Control-W من إغلاق النافذة الطرفية!\n[نصيحة للمحترفين] اطلع على $1 للتعرّف على مزيد من المعلومات.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "options_button_label": {
+      "message": "الخيارات"
+   },
+   "plugin_loading": {
+      "message": "‏جارٍ تحميل المكوّن الإضافي NaCl..."
+   },
+   "plugin_loading_complete": {
+      "message": " تم."
+   },
+   "pref_backup_filename": {
+      "message": "‏نسخة احتياطية لتفضيلات Secure Shell‏.json"
+   },
+   "preferences_header": {
+      "message": "إعدادات الملف الشخصي"
+   },
+   "preferences_reset": {
+      "message": "تمت إعادة تعيين جميع التفضيلات!"
+   },
+   "reconnect_message": {
+      "message": "هل تريد إعادة الاتصال أم اختيار اتصال آخر أم الخروج؟"
+   },
+   "relay_retry": {
+      "message": "جارٍ إعادة المحاولة..."
+   },
+   "restore_prefs": {
+      "message": "استرداد النسخة الاحتياطية"
+   },
+   "shortcut_list_aria_label": {
+      "message": "الاتصالات المحفوظة"
+   },
+   "ssh_argstr_label": {
+      "message": "‏وسيطات SSH"
+   },
+   "terminal_preview_label": {
+      "message": "معاينة"
+   },
+   "terminal_profile_label": {
+      "message": "الملف الشخصي الحالي"
+   },
+   "unexpected_error": {
+      "message": "حدث خطأ غير متوقع، الرجاء التحقق من وحدة تحكم جافا سكريبت للحصول على المزيد من التفاصيل."
+   },
+   "unmount_button_label": {
+      "message": "‏إلغاء تحميل SFTP"
+   },
+   "update_available_tooltip": {
+      "message": "يتوفر تحديث.  يُرجى إغلاق جميع النوافذ."
+   },
+   "welcome_faq": {
+      "message": "‏إجابات الأسئلة الشائعة: $1 (ctrl+النقر على الروابط لفتحها)",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         }
+      }
+   },
+   "welcome_version": {
+      "message": "مرحبًا بك في $1 الإصدار $2.",
+      "placeholders": {
+         "1": {
+            "content": "$1"
+         },
+         "2": {
+            "content": "$2"
+         }
+      }
+   },
+   "zoom_warning": {
+      "message": "‏يُرجى تعيين قائمة Chrome->تكبير/تصغير إلى 100%"
+   }
+}

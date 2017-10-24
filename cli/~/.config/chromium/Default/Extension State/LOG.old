@@ -1,0 +1,15 @@
+2017/10/23-00:08:26.634 3097 Reusing MANIFEST ~/.config/chromium/Default/Extension State/MANIFEST-000001
+2017/10/23-00:08:26.634 3097 Recovering log #15
+2017/10/23-00:08:26.642 3097 Reusing old log ~/.config/chromium/Default/Extension State/000015.log 
+2017/10/23-00:08:27.160 3794 Level-0 table #19: started
+2017/10/23-00:08:27.195 3794 Level-0 table #19: 1529865 bytes OK
+2017/10/23-00:08:27.213 3794 Delete type=0 #15
+2017/10/23-00:08:27.213 3794 Compacting 4@0 + 1@1 files
+2017/10/23-00:08:27.261 3794 Generated table #20@0: 9 keys, 2528 bytes
+2017/10/23-00:08:27.261 3794 Compacted 4@0 + 1@1 files => 2528 bytes
+2017/10/23-00:08:27.283 3794 compacted to: files[ 0 1 1 0 0 0 0 ]
+2017/10/23-00:08:27.283 3794 Delete type=2 #19
+2017/10/23-00:08:27.284 3794 Delete type=2 #8
+2017/10/23-00:08:27.284 3794 Delete type=2 #14
+2017/10/23-00:08:27.286 3794 Delete type=2 #16
+2017/10/23-00:08:27.286 3794 Delete type=2 #11

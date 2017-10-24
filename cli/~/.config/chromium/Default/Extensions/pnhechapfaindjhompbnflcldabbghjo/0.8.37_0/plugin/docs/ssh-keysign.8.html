@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <style>
+    table.head, table.foot { width: 100%; }
+    td.head-rtitle, td.foot-os { text-align: right; }
+    td.head-vol { text-align: center; }
+    div.Pp { margin: 1ex 0ex; }
+  </style>
+  <title>SSH-KEYSIGN(8)</title>
+</head>
+<body>
+<table class="head">
+  <tr>
+    <td class="head-ltitle">SSH-KEYSIGN(8)</td>
+    <td class="head-vol">System Manager's Manual</td>
+    <td class="head-rtitle">SSH-KEYSIGN(8)</td>
+  </tr>
+</table>
+<div class="manual-text">
+<h1 class="Sh" id="NAME">NAME</h1>
+<b class="Nm">ssh-keysign</b> &#8212; <span class="Nd">ssh helper program for
+  host-based authentication</span>
+<h1 class="Sh" id="SYNOPSIS">SYNOPSIS</h1>
+<table class="Nm">
+  <colgroup>
+    <col style="width: 11.00ex;"/>
+    <col/>
+  </colgroup>
+  <tr>
+    <td><b class="Nm">ssh-keysign</b></td>
+    <td></td>
+  </tr>
+</table>
+<h1 class="Sh" id="DESCRIPTION">DESCRIPTION</h1>
+<b class="Nm">ssh-keysign</b> is used by
+  <a class="Xr" href="ssh.1.html">ssh(1)</a> to access the local host keys and
+  generate the digital signature required during host-based authentication.
+<div class="Pp"></div>
+<b class="Nm">ssh-keysign</b> is disabled by default and can only be enabled in
+  the global client configuration file <i class="Pa">/etc/ssh/ssh_config</i> by
+  setting <b class="Cm">EnableSSHKeysign</b> to &#8220;yes&#8221;.
+<div class="Pp"></div>
+<b class="Nm">ssh-keysign</b> is not intended to be invoked by the user, but
+  from <a class="Xr" href="ssh.1.html">ssh(1)</a>. See
+  <a class="Xr" href="ssh.1.html">ssh(1)</a> and
+  <a class="Xr" href="sshd.8.html">sshd(8)</a> for more information about
+  host-based authentication.
+<h1 class="Sh" id="FILES">FILES</h1>
+<dl class="Bl-tag" style="margin-left: 6.00ex;">
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_config</i></dt>
+  <dd class="It-tag">Controls whether <b class="Nm">ssh-keysign</b> is enabled.
+    <div class="Pp"></div>
+  </dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_dsa_key</i></dt>
+  <dd class="It-tag" style="width: auto;">&#160;</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_ecdsa_key</i></dt>
+  <dd class="It-tag" style="width: auto;">&#160;</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_ed25519_key</i></dt>
+  <dd class="It-tag" style="width: auto;">&#160;</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_rsa_key</i></dt>
+  <dd class="It-tag">These files contain the private parts of the host keys used
+      to generate the digital signature. They should be owned by root, readable
+      only by root, and not accessible to others. Since they are readable only
+      by root, <b class="Nm">ssh-keysign</b> must be set-uid root if host-based
+      authentication is used.
+    <div class="Pp"></div>
+  </dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_dsa_key-cert.pub</i></dt>
+  <dd class="It-tag" style="width: auto;">&#160;</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_ecdsa_key-cert.pub</i></dt>
+  <dd class="It-tag" style="width: auto;">&#160;</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_ed25519_key-cert.pub</i></dt>
+  <dd class="It-tag" style="width: auto;">&#160;</dd>
+  <dt class="It-tag" style="margin-left: -6.00ex;"><i class="Pa">/etc/ssh/ssh_host_rsa_key-cert.pub</i></dt>
+  <dd class="It-tag">If these files exist they are assumed to contain public
+      certificate information corresponding with the private keys above.</dd>
+</dl>
+<h1 class="Sh" id="SEE_ALSO">SEE ALSO</h1>
+<a class="Xr" href="ssh.1.html">ssh(1)</a>,
+  <a class="Xr" href="ssh-keygen.1.html">ssh-keygen(1)</a>,
+  <a class="Xr" href="ssh_config.5.html">ssh_config(5)</a>,
+  <a class="Xr" href="sshd.8.html">sshd(8)</a>
+<h1 class="Sh" id="HISTORY">HISTORY</h1>
+<b class="Nm">ssh-keysign</b> first appeared in <span class="Ux">OpenBSD
+  3.2</span>.
+<h1 class="Sh" id="AUTHORS">AUTHORS</h1>
+<span class="An">Markus Friedl</span>
+  &lt;<a class="Mt" href="mailto:markus@openbsd.org">markus@openbsd.org</a>&gt;</div>
+<table class="foot">
+  <tr>
+    <td class="foot-date">February 17, 2016</td>
+    <td class="foot-os">openssh-7.5p1</td>
+  </tr>
+</table>
+</body>
+</html>
