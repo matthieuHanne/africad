@@ -27,7 +27,7 @@ gufw==17.10.0
 i3-py==0.6.5
 idna==2.6
 itsdangerous==0.24
-Jinja2==2.9.6
+Jinja2==2.11.3
 lightdm-gtk-greeter-settings==1.2.1
 louis==3.3.0
 Mako==1.0.7
